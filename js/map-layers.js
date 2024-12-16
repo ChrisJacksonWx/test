@@ -2,7 +2,7 @@ const stateName = 'South Carolina'
 let map;
 
 // Load the map style from a JSON file
-fetch('./esri_extremely_basic.json')
+fetch('./roads-basemap-with-terrain.json')
   .then(response => response.json())
   .then(mapStyle => {
     fetch('https://raw.githubusercontent.com/ChrisJacksonWx/geojson-store/main/CONUS-State-Mask.geojson')

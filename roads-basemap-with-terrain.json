@@ -1,4 +1,4 @@
-{
+F{
   "version": 8,
   "name": "Voyager",
   "metadata": {},
@@ -42,7 +42,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "background-color": "white",
+        "background-color":  "rgba(46, 53, 62, 1)",
         "background-opacity": 1
       }
     },
@@ -4073,7 +4073,7 @@
       "source": "states",
       "paint": {
         "line-color": "#1f1f1f",
-        "line-dasharray": [0, 2]
+        "line-dasharray": [1, 0]
       }
     },
     {

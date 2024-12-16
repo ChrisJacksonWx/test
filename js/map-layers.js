@@ -7,12 +7,19 @@ import { mesoToken } from './obs';
 
 // Load the map style from a JSON file
 fetch('./roads-basemap-with-terrain.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) throw new Error('Failed to load map style');
+    return response.json();
+  })
   .then(mapStyle => {
-    fetch('https://raw.githubusercontent.com/ChrisJacksonWx/geojson-store/main/CONUS-State-Mask.geojson')
-      .then(response => response.json())
+    return fetch('https://raw.githubusercontent.com/ChrisJacksonWx/geojson-store/main/CONUS-State-Mask.geojson')
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to load GeoJSON');
+        return response.json();
+      })
       .then(data => {
         const targetFeature = data.features.find(feature => feature.properties.NAME === stateName);
+        if (!targetFeature) throw new Error('State not found in GeoJSON');
 
         // Extract the coordinates from the GeoJSON object
         const bboxCoordinates = targetFeature.geometry.coordinates;
@@ -44,13 +51,10 @@ fetch('./roads-basemap-with-terrain.json')
         map.on('load', () => {
           onLoad();
         });
-      })
-      .catch(error => {
-        console.error('Error loading states geojson:', error);
       });
   })
   .catch(error => {
-    console.error('Error loading map style:', error);
+    console.error('Error initializing map:', error);
   });
 
 // Fetch observations using mesoToken
@@ -64,7 +68,10 @@ const fetchObservations = () => {
   });
 
   return fetch(`${apiUrl}?${queryParams}`)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) throw new Error('Failed to fetch observations');
+      return response.json();
+    })
     .then(data => {
       data.STATION.forEach(station => {
         const {

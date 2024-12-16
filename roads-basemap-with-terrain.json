@@ -89,7 +89,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "rgba(203, 225, 228, 1)",
+        "fill-color": "rgba(102, 180, 242, 1)",
         "fill-antialias": true,
         "fill-translate-anchor": "map",
         "fill-opacity": 1,
@@ -4064,7 +4064,7 @@
       "source": "states",
       "paint": {
         "fill-color": "#FEFEFF",
-        "fill-opacity": 1
+        "fill-opacity": 0
       }
     },
     {
@@ -4073,7 +4073,7 @@
       "source": "states",
       "paint": {
         "line-color": "#1f1f1f",
-        "line-dasharray": [2, 4]
+        "line-dasharray": [1, 0]
       }
     },
     {

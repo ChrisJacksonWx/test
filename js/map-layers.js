@@ -177,7 +177,7 @@ var center_font = 20
 const onLoad = () => {
   // map.fitBounds([-83.8931,31.7307,-78.0923,35.506]);
 
-  fetch('https://api.synopticdata.com/v2/stations/latest?state=SC&vars=air_temp,dew_point_temperature,wind_speed,wind_direction&network=1,2,166,248,73,96,65,249,,3001,3002,188,278&token=d8c6aee36a994f90857925cea26934be')
+  fetch('https://api.synopticdata.com/v2/stations/latest?state=SC&vars=air_temp,dew_point_temperature,wind_speed,wind_direction&network=1,2,166,248,73,65&token=d8c6aee36a994f90857925cea26934be')
       .then(response => response.json())
       .then(data => {
         let stn_id, stn_name, temp_valid, temp_f, dew_f, winds, wind_kts, wind_dir, stn_latitude, stn_longitude
@@ -202,7 +202,7 @@ const onLoad = () => {
       .catch(error => console.error('Error fetching data:', error));
 
   // // Fetch data from the API
-  // fetch('https://api.synopticdata.com/v2/stations/latest?state=SC&vars=air_temp&network=1,2,166,248,73,96,65,249,,3001,3002,188,278&token=d8c6aee36a994f90857925cea26934be')
+  // fetch('https://api.synopticdata.com/v2/stations/latest?state=SC&vars=air_temp&network=1,2,166,248,73,65&token=d8c6aee36a994f90857925cea26934be')
   //     .then(response => response.json())
   //     .then(data => {
   //       console.log(data)

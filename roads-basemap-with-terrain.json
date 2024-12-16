@@ -5,7 +5,7 @@
   "sources": {
     "states": {
       "type": "geojson",
-      "data": "https://raw.githubusercontent.com/EFisher828/geojson-store/main/CONUS-State-Mask.geojson"
+      "data": "https://raw.githubusercontent.com/ChrisJacksonWx/geojson-store/main/CONUS-State-Mask.geojson"
     },
     "carto": {
       "type": "vector",

@@ -4073,7 +4073,7 @@
       "source": "states",
       "paint": {
         "line-color": "#1f1f1f",
-        "line-dasharray": [2, 4]
+        "line-dasharray": [0, 2]
       }
     },
     {

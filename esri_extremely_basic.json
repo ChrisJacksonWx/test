@@ -28,7 +28,7 @@
         "paint": {
           "hillshade-illumination-direction": 335,
           "hillshade-exaggeration": 0.3,
-          "hillshade-shadow-color": "rgba(120, 120, 120, 1)"
+          "hillshade-shadow-color": "rgba(0, 0, 0, 1)"
         }
       },
       {
@@ -36,8 +36,8 @@
         "type": "background",
         "layout": {"visibility": "visible"},
         "paint": {
-          "background-color": "rgba(46, 53, 62, 1)",
-          "background-opacity": 1
+          "background-color": "white",
+          "background-opacity": 0
         }
       },
       {

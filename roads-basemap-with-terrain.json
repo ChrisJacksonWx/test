@@ -42,7 +42,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "background-color":  "rgba(46, 53, 62, 1)",
+        "background-color":  "white",
         "background-opacity": 1
       }
     },

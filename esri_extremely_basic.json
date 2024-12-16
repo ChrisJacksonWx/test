@@ -36,7 +36,7 @@
         "type": "background",
         "layout": {"visibility": "visible"},
         "paint": {
-          "background-color": "white",
+          "background-color": "rgba(46, 53, 62, 1)",
           "background-opacity": 0
         }
       },

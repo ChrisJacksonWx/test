@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+
+
+@font-face {
+  font-family: "ESRI Weather";
+  src: url("ESRIWeather.eot");
+  src: url("ESRIWeather.eot?#iefix") format("embedded-opentype"),
+       url("ESRIWeather.woff") format("woff"),
+       url("ESRIWeather.ttf") format("truetype"),
+       url("ESRIWeather.svg#svgESRIWeather") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.label {
+  background: white;
+  border-radius: 3px;
+  padding: 2px 5px;
+  font-size: 12px;
+  text-align: center;
+  width: max-content;
+}
+
+.windbarb {
+    /* position: absolute; */
+    position: relative;
+    font-family: "ESRI Weather" !important;
+    /* font-size: 55px;
+    line-height: 55px; */
+    padding: 0px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.windbarb-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin:auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+}
+
+.wx-icon {
+    background: transparent;
+    border: 0px;
+    font-size: 0.8em;
+}
+
+.temp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    /* font-size: 12px; */
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    z-index: 910;
+}
+
+.dew {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    color: blue;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    z-index: 910;
+}
